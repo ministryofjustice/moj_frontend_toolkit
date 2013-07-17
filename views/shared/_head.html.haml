@@ -1,0 +1,23 @@
+%title= title
+= csrf_meta_tag
+
+/ ERB block to avoid mangling the conditional comments
+:erb
+  <!--[if gt IE 8]><!-->
+    <%= stylesheet_link_tag '/assets/moj-base/gds-static/gds-application' %>
+  <!--<![endif]-->
+  <!--[if IE 6]>
+    <%= stylesheet_link_tag '/assets/moj-base/gds-static/gds-application-ie6' %>
+  <![endif]-->
+  <!--[if IE 7]>
+    <%= stylesheet_link_tag '/assets/moj-base/gds-static/gds-application-ie7' %>
+  <![endif]-->
+  <!--[if IE 8]>
+    <%= stylesheet_link_tag '/assets/moj-base/gds-static/gds-application-ie8' %>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+    <script src="/assets/moj-base/gds-static/gds-ie-27ccded64045ab36dbfb67c2f47c362b.js" type="text/javascript"></script>
+  <![endif]-->
+= stylesheet_link_tag "application", media: "all"
+

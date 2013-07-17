@@ -1,0 +1,37 @@
+@import '_typography';
+@import 'vars';
+
+#global-header {
+  .header-wrapper {
+    padding: 0;
+    .header-logo {
+      max-width: 990px;
+      margin: auto;
+      padding: 0 15px;
+      color: #fff;
+      height: 53px;
+      vertical-align: middle;
+      display: table-cell;
+      
+      @include core-24;
+
+      small {
+        @include core-16;
+        padding: 3px 5px;
+        color: #fff;
+        font-weight: bold;
+        margin-left: 16px;
+        vertical-align: 3px;
+
+        &.alpha {
+          background-color: $alphacolour;
+        }
+        &.beta {
+          background-color: $betacolour;
+        }
+      }
+    }
+  } 
+}
+
+

@@ -1,0 +1,48 @@
+@import '_typography';
+@import 'vars';
+
+header {
+  h1 {
+    @include core-48;
+    margin: 48px 360px 16px 0;
+    font-size: 4.2rem;
+    font-weight: bold;
+    line-height: 4.8rem;
+    span {
+      @include core-27;
+      color: $grey-1;
+      display: block;
+    }
+  }
+}
+
+#wrapper {
+  border-bottom: medium none;
+  border-top: 10px solid #fff;
+  margin: auto;
+  padding: 0 30px;
+  max-width: 980px;
+  .information & {
+    border-top: 10px solid $informationcolour;
+  }
+  .service & {
+    border-top: 10px solid $servicecolour;
+  }
+  .beta & {
+    border-top: 10px solid $betacolour;
+  }
+  .alpha & {
+    border-top: 10px solid $alphacolour;
+  }
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+input[type="text"]{
+  margin: 0;
+}

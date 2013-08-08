@@ -2,7 +2,109 @@
   margin-top: 150px;
   .footer-meta {
     border: 0;
-    margin-top: 0;
+    margin: 0;
     padding-top: 0;
+    
+    color: #454A4C;
   }
+}
+
+
+#footer .footer-meta {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #A1ACB2;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0 0;
+    clear: both;
+    color: #454A4C;
+    font-size: 0;
+    margin: 6rem 0 0;
+    padding: 3rem 0 6rem;
+}
+#footer .footer-meta {
+    margin: 0;
+}
+#footer .footer-meta nav {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 69%;
+}
+#footer .footer-meta nav {
+    display: block;
+    width: 100%;
+}
+#footer .footer-meta nav ul {
+    display: inline-block;
+    font-family: "nta",Arial,sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    list-style: none outside none;
+    margin: 0 0 1em;
+    padding: 0;
+    text-transform: none;
+}
+#footer .footer-meta nav ul {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+#footer .footer-meta nav ul li {
+    display: inline-block;
+    margin: 0 1.5rem 0 0;
+}
+#footer .footer-meta nav ul {
+    margin: 0 0 1.5em;
+    width: auto;
+}
+#footer .footer-meta nav p {
+    clear: left;
+    display: block;
+    font-family: "nta",Arial,sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 1em 0;
+    text-transform: none;
+}
+#footer .footer-meta nav p {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+}
+#footer .footer-meta .copyright {
+    display: inline-block;
+    float: none;
+    font-family: "nta",Arial,sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.25;
+    min-height: 15rem;
+    text-align: inherit;
+    text-transform: none;
+    width: 30%;
+}
+#footer .footer-meta .copyright {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+}
+#footer .footer-meta .copyright a {
+    background: url("https://assets.digital.cabinet-office.gov.uk/static/govuk-crest-795cd6afb205d81a4267e100e11debe1.png") no-repeat scroll 50% 0 transparent;
+    display: block;
+    padding: 11.5rem 0 0;
+    text-align: center;
+    text-decoration: none;
+}
+#footer .footer-meta .copyright a {
+    background-image: url("https://assets.digital.cabinet-office.gov.uk/static/govuk-crest-2x-1da912cf347870372d1245bc44ecb4a7.png");
+    background-size: 125px 102px;
+}
+#footer .footer-meta .copyright {
+    display: block;
+    margin: 3rem 0 0;
+    min-height: 0;
+    padding: 0;
+    width: 100%;
 }

@@ -19,16 +19,16 @@
 / ERB block to avoid mangling the conditional comments
 :erb
   <!--[if gt IE 8]><!-->
-    <%= stylesheet_link_tag 'stylesheets/gov-static/gov-goodbrowsers' %>
+    <%= stylesheet_link_tag 'gov-static/gov-goodbrowsers' %>
   <!--<![endif]-->
   <!--[if IE 6]>
-    <%= stylesheet_link_tag 'stylesheets/gov-static/gov-ie6' %>
+    <%= stylesheet_link_tag 'gov-static/gov-ie6' %>
   <![endif]-->
   <!--[if IE 7]>
-    <%= stylesheet_link_tag 'stylesheets/gov-static/gov-ie7' %>
+    <%= stylesheet_link_tag 'gov-static/gov-ie7' %>
   <![endif]-->
   <!--[if IE 8]>
-    <%= stylesheet_link_tag 'stylesheets/gov-static/gov-ie8' %>
+    <%= stylesheet_link_tag 'gov-static/gov-ie8' %>
     <script type="text/javascript">
       (function(){if(window.opera){return;}
       setTimeout(function(){var a=document,g,b={families:(g=
@@ -41,11 +41,11 @@
     </script>
   <![endif]-->
   <!--[if gte IE 9]><!-->
-    <%= stylesheet_link_tag 'stylesheets/gov-static/gov-fonts' %>
+    <%= stylesheet_link_tag 'gov-static/gov-fonts' %>
   <!--<![endif]-->
 
   <!--[if lt IE 9]>
-    javascript_include_tag 'gov-static/gov-ie.js'
+    <%= javascript_include_tag 'gov-static/gov-ie.js' %>
   <![endif]-->
 
 = stylesheet_link_tag "stylesheets/gov-static/gov-print", media: "print"

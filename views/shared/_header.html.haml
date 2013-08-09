@@ -1,0 +1,5 @@
+- if Rails.configuration.govbranding
+  = render "shared/moj_headergov", :title => page_title('')
+- else
+  = render "shared/moj_header", :title => page_title('')
+  

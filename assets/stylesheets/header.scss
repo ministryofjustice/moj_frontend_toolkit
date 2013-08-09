@@ -5,7 +5,7 @@
   small {
     @include core-16;
     padding: 3px 5px;
-    color: #fff;
+    color: $white;
     font-weight: bold;
     margin-left: 16px;
     vertical-align: 3px;
@@ -22,16 +22,22 @@
 .indicator {
   .alpha & {
     background-color: $alphacolour;
-    color: #fff;
+    color: $white;
+    a {
+      color: $white;
+      &:hover {
+        color: $grey-4;
+      }
+    }
   }
   .beta & {
     background-color: $betacolour;
   }
   .admin & {
     background-color: $admincolour; 
-    color: #fff;
+    color: $white;
     a {
-      color: #fff;
+      color: $white;
       text-decoration: none;
       &:hover {
         text-decoration: underline;

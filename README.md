@@ -9,7 +9,9 @@ This repo lives inside the Gem repo as a subtree under `/app/` so that the asset
 
 At the time of writing these are:
 
+    _footer.html.haml
     _head.html.haml
+    _header.html.haml
     _moj_footer.html.haml
     _moj_footergov.html.haml
     _moj_header.html.haml
@@ -53,4 +55,33 @@ You will additionally need to precompile the assets supplied by the toolkit by a
       moj-base.css
       gov-static/gov-ie.js
     )
+
+Now in your layouts you can render header and footer includes in the usual way to pull in the files above, which will give you the header and footer determined by your configuration.
+
+A sample `application.html.haml` layout might look like this (real example taken from current project):
+
+    !!!
+    %html
+      %head
+        = render "shared/head", :title => Rails.configuration.app_title
+
+      %body{:class => body_class()}
+
+        = render "shared/header"
+
+        #wrapper.group
+          = render "shared/phase_indicator"
+          %section#content.group{:role => "main"}
+            .full-width-group
+              = yield
+
+        = render "shared/footer"
+        
+        = render "shared/script"
+
+That `body_class()` is in the application helper and simply looks like:
+
+    def body_class
+      Rails.configuration.phase + " " + Rails.configuration.product_type
+    end
 

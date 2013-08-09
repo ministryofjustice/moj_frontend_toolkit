@@ -1,3 +1,41 @@
-footer#footer {
-  
+// gov version comes from gov-static stuff
+
+footer#footer.nongov {
+  margin-top: 150px;
+  .footer-meta {
+    border: 0;
+    margin-top: 0;
+    padding-top: 0;
+    nav {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 69%;
+      ul {
+        @include core-16;
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 0 1em;
+        padding: 0;
+        li {
+          display: inline-block;
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+    .copyright {
+      display: inline-block;
+      float: none;
+
+      min-height: 150px;
+      text-align: inherit;
+      width: 30%;
+      a {
+        background: url("https://assets.digital.cabinet-office.gov.uk/static/govuk-crest-795cd6afb205d81a4267e100e11debe1.png") no-repeat scroll 50% 0 transparent;
+        display: block;
+        padding: 115px 0 0;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
 }

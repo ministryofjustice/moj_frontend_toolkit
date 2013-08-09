@@ -18,3 +18,35 @@
     }
   }
 }
+
+.indicator {
+  .alpha & {
+    background-color: $alphacolour;
+    color: #fff;
+  }
+  .beta & {
+    background-color: $betacolour;
+  }
+  .admin & {
+    background-color: $admincolour; 
+    color: #fff;
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  p {
+    @include core-16;
+    padding: 8px 20px;
+    margin: 0;
+    strong {
+      text-transform: uppercase;
+      .admin & {
+        text-transform: none;
+      }
+    }
+  }
+}

@@ -20,6 +20,8 @@
 }
 
 .indicator {
+  margin: auto;
+  width: 980px;
   .alpha & {
     background-color: $alphacolour;
     color: $white;

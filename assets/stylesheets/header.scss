@@ -34,6 +34,13 @@
   }
   .beta & {
     background-color: $betacolour;
+    color: $black;
+    a {
+      color: $black;
+      &:hover {
+        color: $grey-1;
+      }
+    }
   }
   .admin & {
     background-color: $admincolour; 

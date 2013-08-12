@@ -1,5 +1,10 @@
 @import '_colours';
 @import 'vars';
+@import '_css3';
+
+button, .button {
+  @include border-radius(4px);
+}
 
 .left {
   float: left;

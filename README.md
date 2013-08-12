@@ -3,9 +3,14 @@ MOJFrontEndToolkit
 
 Intended to provide a consistent CSS/JS/Assets starting point for MOJ apps.
 
+**NOTE:** The Sass files expect to be able to find files from the GOV.UK Frontend Toolkit such as `_colours.scss` and `_css3.scss`, so you **must** either include the [GOV.UK Frontend Toolkit Gem](https://github.com/alphagov/govuk_frontend_toolkit_gem) in your project (if it's a RoR project, recommended), or include the files directly by grabbing them from the original [GOV.UK Frontend Toolkit repo](https://github.com/alphagov/govuk_frontend_toolkit) and adding them to your assets.
+
 If this is to be used in a Rails project, include the [Gem wrapper repo](https://github.com/ministryofjustice/moj_frontend_toolkit_gem), which includes the latest version of this repo. Use outside of the Gem in a non-rails project is at your own risk, but the assets should work ok as long as your project can speak Sass.
 
-This repo lives inside the Gem repo as a subtree under `/app/` so that the assets and views folders are supplied by the asset pipeline at `/app/assets/` and `/app/views/` respectively. This means thast as well as the CSS, image and JS assets, certain fragments of HAML are supplied as well.
+This repo lives inside the Gem repo as a subtree under `/app/` so that the *assets* and *views* folders are supplied by the asset pipeline at `/app/assets/` and `/app/views/` respectively. This means that as well as the CSS, image and JS assets, certain fragments of HAML are supplied as well.
+
+Partials
+--------
 
 At the time of writing these are:
 
@@ -19,7 +24,20 @@ At the time of writing these are:
     _phase_indicator.html.haml
     _script.html.haml
 
-Have a look at each of these and you should get a feel for what they do. The files are very prosriptive of the layout in current MOJ apps/sites, and are meant to be a shortcut to getting off the ground quickly with a new project as opposed to being flexible and versatile and trying to cover every angle.
+Have a look at each of these and you should get a feel for what they do. The files are very proscriptive of the layout in current MOJ apps/sites, and are meant to be a shortcut to getting off the ground quickly with a new project as opposed to being flexible and versatile and trying to cover every angle.
+
+Assets
+------
+
+Use the `head` include above in the `HEAD` of your template with this line:
+
+    = render "shared/head", :title => foo
+
+and this will include the application CSS files for all browsers by way of precompiled manifests, as well as conditional JS for versions of IE. Have a look at `_head.html.haml` and you'll see what I mean. To then include the MOJ specific CSS, add this line to the require block in your `/app/assets/application.css`:
+
+     *= require moj-base
+
+
 
 Configuration
 -------------

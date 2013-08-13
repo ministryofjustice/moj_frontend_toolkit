@@ -60,8 +60,6 @@ In order for these files to work, you will need to set a number of variables in 
     # feedback_email is the address linked in the alpha/beta bar asking for feedback
     config.feedback_email = 'test@example.com'
 
-At the time of writing, `config.product_type` is not used but is possibly to be used in the near future so it stays for now.
-
 You will additionally need to precompile the assets supplied by the toolkit by adding the following (also in your `class Application`):
 
     config.assets.enabled = true
@@ -70,6 +68,9 @@ You will additionally need to precompile the assets supplied by the toolkit by a
       gov-static/gov-ie6.css
       gov-static/gov-ie7.css
       gov-static/gov-ie8.css
+      gov-static/gov-print.css
+      gov-static/gov-fonts.css
+      gov-static/gov-fonts-ie8.css
       moj-base.css
       gov-static/gov-ie.js
     )
@@ -103,3 +104,4 @@ That `body_class()` is in the application helper and simply looks like:
       Rails.configuration.phase + " " + Rails.configuration.product_type
     end
 
+so feel free to copy that or roll your own.

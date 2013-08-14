@@ -86,9 +86,6 @@ header {
   }
 }
 
-
-
-
 #global-header.nongov {
   .header-wrapper {
     padding: 0;
@@ -122,4 +119,6 @@ header {
   } 
 }
 
-
+#global-breadcrumb ol {
+  border: 0;
+}

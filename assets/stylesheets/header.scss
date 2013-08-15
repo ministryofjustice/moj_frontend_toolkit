@@ -100,6 +100,11 @@ header {
       
       @include core-24;
 
+      #proposition-name {
+        color: $white;
+        text-decoration: none;
+      }
+
       small {
         @include core-16;
         padding: 3px 5px;

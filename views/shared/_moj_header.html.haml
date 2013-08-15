@@ -1,7 +1,8 @@
 %header#global-header.group.nongov{:role => "banner"}
   .header-wrapper.group
     .header-logo
-      = title
-      - if Rails.configuration.phase != 'live'
-        %small{:class => Rails.configuration.phase}
-          = Rails.configuration.phase.upcase
+      %a#proposition-name{:href => "/"}
+        = title
+        - if Rails.configuration.phase != 'live'
+          %small{:class => Rails.configuration.phase}
+            = Rails.configuration.phase.upcase

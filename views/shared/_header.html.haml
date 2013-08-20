@@ -1,1 +1,1 @@
-= render "shared/moj_header" + (Rails.configuration.govbranding ? "gov" : ""), :title => Rails.configuration.app_title
+= render "shared/moj_header" + (Rails.configuration.govbranding ? "gov" : ""), :title => defined?(proposition) ? proposition : Rails.configuration.app_title

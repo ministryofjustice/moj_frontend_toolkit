@@ -59,6 +59,8 @@ input[type="text"]{
 
 section#content {
   margin: auto;
-  width: 980px;
+  max-width: 960px;
+  width: auto;
+  _width: 960px; /* IE6 only */
   min-height: 400px;
 }

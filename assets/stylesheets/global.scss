@@ -13,12 +13,15 @@
  *    `:before` to contain the top-margins of child elements.
  */
 .cf:before,
-.cf:after {
+.cf:after,
+.clearfix:before,
+.clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.cf:after {
+.cf:after,
+.clearfix:after {
     clear: both;
 }
 
@@ -26,7 +29,8 @@
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf {
+.cf,
+.clearfix {
     *zoom: 1;
 }
 /* end clearfix */

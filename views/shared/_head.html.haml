@@ -54,4 +54,6 @@
     <!--<![endif]-->
 
 = stylesheet_link_tag "gov-static/gov-print", media: "print"
-= stylesheet_link_tag "application", media: "all"
+
+- unless defined?(noapp) && noapp
+  = stylesheet_link_tag "application", media: "all"

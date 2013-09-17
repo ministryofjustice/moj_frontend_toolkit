@@ -20,8 +20,19 @@
           moj.Modules[x].init();
         }
       }
-    }
+    },
 
+    // safe logging
+    log: function( msg ) {
+      if( window && window.console ) {
+        window.console.log( msg );
+      }
+    },
+    dir: function( obj ) {
+      if( window && window.console ) {
+        window.console.dir( obj );
+      }
+    }
   };
 
   window.moj = moj;

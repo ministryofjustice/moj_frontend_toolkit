@@ -9,45 +9,64 @@
   "use strict";
 
   // Define the class
-  var Tabs = function (el) {
-    this.cacheEls(el);
-    this.bindEvents();
+  var Tabs = function (el, options) {
+    this.settings = $.extend({}, this.defaults, options);
+    this._cacheEls(el);
+    this._bindEvents();
+    if (this.settings.activatefirst) {
+      this._activateFirstLink();
+    };
   };
 
   Tabs.prototype = {
 
-    classes: {
-      active:'is-active'
+    defaults: {
+      activatefirst: true,
+      focusfirst: false,
+      activetabclass: 'is-active',
+      activepaneclass: 'is-active'
     },
 
-    cacheEls: function (wrap) {
-      this.$tabNav = $('ul', wrap);
+    _cacheEls: function (wrap) {
+      this.$tabNav = $('.js-tabs-nav', wrap).first();
       this.$tabs = $('a', this.$tabNav);
-      this.$tabPanes = $('.js-tabs-content', wrap).children();
+      this.$tabPanes = $('.js-tabs-content', wrap).first().children();
     },
 
-    bindEvents: function () {
+    _bindEvents: function () {
       // store a reference to obj before 'this' becomes jQuery obj
       var self = this;
 
       this.$tabs.on('click', function (e) {
         e.preventDefault();
-        self._activateLink($(this));
-        self._activateTab($(this).attr('href'));
+        self._activateTab($(this));
+        self._activatePane($(this).attr('href'));
       });
     },
 
-    _activateLink: function (el) {
-     this.$tabs.removeClass(this.classes.active).filter(el).addClass(this.classes.active);
+    _activateTab: function (el) {
+      this
+        .$tabs.removeClass(this.settings.activetabclass)
+        .filter(el).addClass(this.settings.activetabclass);
     },
 
-    _activateTab: function (hash) {
-      var shown = this.$tabPanes.hide().filter(hash).show();
-      this._focusFirstLink(shown);
+    _activatePane: function (hash) {
+      var shown = this
+                    .$tabPanes.removeClass(this.settings.activepaneclass)
+                    .filter(hash).addClass(this.settings.activepaneclass);
+      
+      if (this.settings.focusfirst) {
+        this._focusFirstElement(shown);
+      };
     },
 
-    _focusFirstLink: function (el) {
-      el.find('a:first').focus();
+    _activateFirstLink: function () {
+      // activate first tab
+      this.$tabNav.find('li').first().find('a').click();
+    },
+
+    _focusFirstElement: function (el) {
+      el.find('a, input, textarea, select, button, [tabindex]').not(':disabled').first().focus();
     }
 
   };
@@ -56,7 +75,7 @@
   moj.Modules.tabs = {
     init: function () {
       $('.js-tabs').each(function () {
-        $(this).data('moj.tabs', new Tabs($(this)));
+        $(this).data('moj.tabs', new Tabs($(this), $(this).data()));
       });
     }
   };

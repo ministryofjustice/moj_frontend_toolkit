@@ -125,9 +125,11 @@ Use the following structure to mark-up your tabs making sure the relevant tabs n
 		</div>
 	</div
 
-To activate, add `modules/moj-tabs.css.scss` to your stylesheet and `modules/moj.tabs.js` to your JavaScript. The tabs module will initiate as part of the `moj.init()` call.
+To activate, include `modules/moj.tabs.js` in your JavaScript. The tabs module will initiate as part of the `moj.init()` call.
 
-When a tab is activated, the relevant pane will be given the class `is-active`. 
+To use the default (show/hide) functionality for tab panes, add `modules/moj-tabs.css.scss` to your stylesheet.
+
+When a tab is activated, it's parent `li` element and the relevant pane will be given the class `is-active`. 
 
 #### Options
 
@@ -140,3 +142,5 @@ data-focusfirst="false" - set to true to focus on the first focussable element i
 data-activetabclass="is-active" - set a bespoke active tab class.
 
 data-activetabclass="is-active" - set a bespoke active pane class. By default, the module CSS sets all panes to `display:none` and the active pane to `display:block`.
+
+data-activetabelement="li" - set to `a` to apply the active class to the link rather than the closest `li`.

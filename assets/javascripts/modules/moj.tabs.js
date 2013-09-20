@@ -24,7 +24,8 @@
       activatefirst: true,
       focusfirst: false,
       activetabclass: 'is-active',
-      activepaneclass: 'is-active'
+      activepaneclass: 'is-active',
+      activetabelement: 'li'
     },
 
     _cacheEls: function (wrap) {
@@ -44,10 +45,12 @@
       });
     },
 
-    _activateTab: function (el) {
-      this
-        .$tabs.removeClass(this.settings.activetabclass)
-        .filter(el).addClass(this.settings.activetabclass);
+    _activateTab: function (activeLink) {
+      var c = this.settings.activetabclass,
+        e = this.settings.activetabelement;
+      
+      this.$tabs.closest(e).removeClass(c);
+      this.$tabs.filter(activeLink).closest(e).addClass(c);
     },
 
     _activatePane: function (hash) {

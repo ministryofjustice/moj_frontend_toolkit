@@ -15,7 +15,9 @@
     this._bindEvents();
     if (this.settings.activatefirst) {
       this._activateFirstLink();
-    };
+    } else {
+      this._activatePane('*');
+    }
   };
 
   Tabs.prototype = {

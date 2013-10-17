@@ -95,7 +95,7 @@ A sample `application.html.haml` layout might look like this (real example taken
               = yield
 
         = render "shared/footer"
-        
+
         = render "shared/script"
 
 That `body_class()` is in the application helper and simply looks like:
@@ -129,7 +129,7 @@ To activate, include `modules/moj.tabs.js` in your JavaScript. The tabs module w
 
 To use the default (show/hide) functionality for tab panes, add `modules/moj-tabs.css.scss` to your stylesheet.
 
-When a tab is activated, it's parent `li` element and the relevant pane will be given the class `is-active`. 
+When a tab is activated, it's parent `li` element and the relevant pane will be given the class `is-active`.
 
 #### Options
 
@@ -144,3 +144,10 @@ data-activetabclass="is-active" - set a bespoke active tab class.
 data-activetabclass="is-active" - set a bespoke active pane class. By default, the module CSS sets all panes to `display:none` and the active pane to `display:block`.
 
 data-activetabelement="li" - set to `a` to apply the active class to the link rather than the closest `li`.
+
+Changelog
+---------
+
+* 2013-10-17  v0.0.42
+  > Added view for global cookie message
+  > Added JS module to handle cookie message display

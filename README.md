@@ -115,15 +115,15 @@ Tabs are designed to be a flexible show/hide system for a series of links which 
 
 Use the following structure to mark-up your tabs making sure the relevant tabs nav (`.js-tabs-nav`) is the first instance found within the wrapper (`.js-tabs`). Tab panes (`.js-tabs-content *`) must be immediate children of the tab content wrapper (`.js-tabs-content`).
 
-  <div class="js-tabs">
-    <div class="js-tabs-nav">
-      …
-        <a href="#my-pane-1" />
-    </div>
-    <div class="js-tabs-content">
-      <div id="my-pane-1" />
-    </div>
-  </div
+	<div class="js-tabs">
+		<div class="js-tabs-nav">
+			…
+				<a href="#my-pane-1" />
+		</div>
+		<div class="js-tabs-content">
+			<div id="my-pane-1" />
+		</div>
+	</div
 
 To activate, include `modules/moj.tabs.js` in your JavaScript. The tabs module will initiate as part of the `moj.init()` call.
 
@@ -147,6 +147,7 @@ data-activetabelement="li" - set to `a` to apply the active class to the link ra
 
 Changelog
 ---------
+
 #### v0.0.42 (2013-10-17)
   * Added view for global cookie message
   * Added JS module to handle cookie message display

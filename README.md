@@ -109,41 +109,7 @@ so feel free to copy that or roll your own.
 Modules
 -------
 
-### Tabs
-
-Tabs are designed to be a flexible show/hide system for a series of links which have an anchor link to a unique element. Tabs can be nested.
-
-Use the following structure to mark-up your tabs making sure the relevant tabs nav (`.js-tabs-nav`) is the first instance found within the wrapper (`.js-tabs`). Tab panes (`.js-tabs-content *`) must be immediate children of the tab content wrapper (`.js-tabs-content`).
-
-	<div class="js-tabs">
-		<div class="js-tabs-nav">
-			…
-				<a href="#my-pane-1" />
-		</div>
-		<div class="js-tabs-content">
-			<div id="my-pane-1" />
-		</div>
-	</div
-
-To activate, include `modules/moj.tabs.js` in your JavaScript. The tabs module will initiate as part of the `moj.init()` call.
-
-To use the default (show/hide) functionality for tab panes, add `modules/moj-tabs.css.scss` to your stylesheet.
-
-When a tab is activated, it's parent `li` element and the relevant pane will be given the class `is-active`.
-
-#### Options
-
-To add an option to the tabs use the `data-*` attribute on the `.js-tabs` element. Below are a list of possible options using their default values.
-
-data-activatefirst="true" - hide all non-active tab panes when initialised.
-
-data-focusfirst="false" - set to true to focus on the first focussable element in the tab pane when activated.
-
-data-activetabclass="is-active" - set a bespoke active tab class.
-
-data-activetabclass="is-active" - set a bespoke active pane class. By default, the module CSS sets all panes to `display:none` and the active pane to `display:block`.
-
-data-activetabelement="li" - set to `a` to apply the active class to the link rather than the closest `li`.
+See [wiki pages](https://github.com/ministryofjustice/moj_frontend_toolkit/wiki) for help on modules.
 
 Changelog
 ---------

@@ -148,6 +148,9 @@ data-activetabelement="li" - set to `a` to apply the active class to the link ra
 Changelog
 ---------
 
+#### v0.0.43 (2013-10-18)
+  * Added responsive styling to phase indicator
+
 #### v0.0.42 (2013-10-17)
   * Added view for global cookie message
   * Added JS module to handle cookie message display

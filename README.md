@@ -114,6 +114,9 @@ See [wiki pages](https://github.com/ministryofjustice/moj_frontend_toolkit/wiki)
 Changelog
 ---------
 
+#### v0.1.0 (2013-10-24)
+  * Added JS module for effects, containing highlight effect
+
 #### v0.0.43 (2013-10-18)
   * Added responsive styling to phase indicator
 

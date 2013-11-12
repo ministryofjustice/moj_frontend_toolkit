@@ -1,0 +1,49 @@
+/* Select box to text autocomplete styles */
+.moj-autocomplete {
+  position: relative;
+
+  input.ui-autocomplete-input {
+    padding-right: 2em;
+    width: 88%;
+  }
+
+  .dd-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 21px;
+    width: 35px;
+    background: image-url("modules/moj-autocomplete/down-arrow.png") right center no-repeat;
+  }
+}
+
+.ui-autocomplete {
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 218px;
+  border: 1px solid #B0BECA;
+  max-height: 350px;
+  overflow-y: scroll;
+
+  .ui-menu-item {
+    a {
+      border-top: 1px solid #B0BECA;
+      display: block;
+      padding: 4px 6px;
+      color: #353D44;
+      cursor: pointer;
+      &.ui-state-hover,
+      &.ui-state-focus {
+        background-color: #D5E5F4;
+        color: #161A1C;
+      }
+    }
+    &:first-child {
+      a {
+        border-top: none;
+      }
+    }
+  }
+}

@@ -114,6 +114,9 @@ See [wiki pages](https://github.com/ministryofjustice/moj_frontend_toolkit/wiki)
 Changelog
 ---------
 
+#### v0.2.0 (2013-11-12)
+  * Dropped JavaScript support for IE6
+
 #### v0.1.0 (2013-10-24)
   * Added JS module for effects, containing highlight effect
 

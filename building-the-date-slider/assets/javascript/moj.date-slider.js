@@ -156,6 +156,10 @@
       this.$scrolls.css({
         width: "" + viewPort + "px"
       });
+      this.$touch.css({
+        height: largeHeight + borderWidth * 2 + "px",
+        top: -Math.floor(largeHeight * upness) + "px"
+      });
       this.$large.css({
         height: "" + largeHeight + "px",
         width: "" + this.settings.dayWidth + "px",

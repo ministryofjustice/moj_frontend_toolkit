@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Slider step 1</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="assets/css/moj.date-slider.css" type="text/css" />
+  
+  <style type="text/css">
+    body { margin: 0; }
+
+    .DateSlider { padding-top: 40px; }
+    .DateSlider-smallDates .DateSlider-days { width: 1400px; }
+    .DateSlider-largeDates .DateSlider-days { width: 800px; }
+    .DateSlider-smallDates { width: 700px; }
+    .DateSlider-largeDates { width: 100px; }
+    .DateSlider-touch { width: 700px; background: rgba(0,255,0,.5); cursor: pointer; }
+    .DateSlider-touch .DateSlider-days { width: 1400px; height: 50px; opacity: .5; margin-top: 50px; }
+
+    .DEMO--touch { position: static; }
+    .DEMO--touch .DateSlider-days { background: url(https://assets.digital.cabinet-office.gov.uk/static/images/open-government-licence_2x-d273d7eca3045d3b710a863d9bfc0b33.png) !important; }
+  </style>
+  <script src="assets/javascript/modernizr.custom.44058.js"></script>
+</head>
+
+<body>
+
+<div class="DateSlider" data-sizeuponload="false" data-centreonday="false" data-emulatetouch="true">
+  <div class="DateSlider-sliders">
+    <div class="DateSlider-smallDates scroll">
+      <ol class="DateSlider-days">
+        <li class="unavailable">24</li>
+        <li class="unavailable">25</li>
+        <li class="unavailable">26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="unavailable">4</li>
+        <li class="unavailable">5</li>
+        <li class="unavailable">6</li>
+      </ol>
+    </div>
+
+    <div class="DateSlider-touch scroll DEMO--touch">
+      <ul class="DateSlider-days"></ul>
+    </div>
+
+    <div class="DateSlider-portalFrame"></div>
+
+    <div class="DateSlider-largeDates scroll">
+      <ul class="DateSlider-days">
+        <li><small>Mon</small>27</li>
+        <li><small>Tue</small>28</li>
+        <li><small>Wed</small>29</li>
+        <li><small>Thu</small>30</li>
+        <li><small>Fri</small>31</li>
+        <li><small>Sat</small>1</li>
+        <li><small>Sun</small>2</li>
+        <li><small>Mon</small>3</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    var moj = {};
+    moj.Modules = {};
+    $(function(){
+      moj.Modules.DateSlider.init()
+    })
+  </script>
+  <script src="assets/javascript/moj.date-slider.js"></script>
+
+
+</body>
+</html>

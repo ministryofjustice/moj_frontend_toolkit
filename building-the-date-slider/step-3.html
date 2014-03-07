@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Slider step 1</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="assets/css/moj.date-slider.css" type="text/css" />
+  
+  <style type="text/css">
+    .DateSlider { padding-top: 40px; }
+    .DateSlider-largeDates .DateSlider-days,
+    .DateSlider-smallDates .DateSlider-days { width: 1400px; }
+    .DateSlider-smallDates,
+    .DateSlider-largeDates { overflow: scroll; width: 700px; }
+    .DateSlider-largeDates { position: static; }
+  </style>
+</head>
+
+<body>
+
+  <div class="DateSlider-smallDates">
+    <ol class="DateSlider-days">
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ol>
+  </div>
+
+  <div class="DateSlider-largeDates">
+    <ul class="DateSlider-days">
+      <li><small>Fri</small>24</li>
+      <li><small>Sat</small>25</li>
+      <li><small>Sun</small>26</li>
+      <li><small>Mon</small>27</li>
+      <li><small>Tue</small>28</li>
+      <li><small>Wed</small>29</li>
+      <li><small>Thu</small>30</li>
+      <li><small>Fri</small>31</li>
+      <li><small>Sat</small>1</li>
+      <li><small>Sun</small>2</li>
+      <li><small>Mon</small>3</li>
+      <li><small>Tue</small>4</li>
+      <li><small>Wed</small>5</li>
+      <li><small>Thu</small>6</li>
+    </ul>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.DateSlider-largeDates, .DateSlider-smallDates').on('scroll', function(){
+        
+        $(this).siblings().scrollLeft( $(this).scrollLeft() )
+
+      })
+    })
+  </script>
+
+
+</body>
+</html>

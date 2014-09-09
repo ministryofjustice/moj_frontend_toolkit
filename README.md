@@ -1,3 +1,10 @@
+Deprecated
+==========
+
+**Do not use**. See this repo instead: https://github.com/ministryofjustice/moj_template
+
+----------
+
 MOJFrontEndToolkit
 ==================
 
